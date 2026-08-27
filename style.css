@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #060913;
+    color: #f1f5f9;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.15) 0px, transparent 50%);
+}
+
+.cyber-panel {
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyber-panel:hover {
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 12px 40px 0 rgba(56, 189, 248, 0.15);
+}
+
+.mono-font {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* Barra de scroll de diseño futurista */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #090d1a;
+}
+::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 10px;
+    border: 2px solid #090d1a;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #4ade80;
+}
+
+/* Animación del pulso de emergencia SOS */
+@keyframes cyber-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); }
+    50% { transform: scale(1.015); box-shadow: 0 0 35px rgba(239, 68, 68, 0.95); }
+}
+.pulse-sos {
+    animation: cyber-pulse 2s infinite;
+}
+
+/* Efecto de escaneo CRT en el visor de cámara */
+.scanlines {
+    position: relative;
+    overflow: hidden;
+}
+.scanlines::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 4px, 6px 100%;
+    pointer-events: none;
+}
+
+/* Brillo de neón texturizado */
+.neon-text-blue {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+.neon-text-green {
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.6);
+}
